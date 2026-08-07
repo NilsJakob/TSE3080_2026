@@ -2,5 +2,7 @@
 
 This book covers the fundamentals in Machines.
 
-<iframe src="https://ourworldindata.org/grapher/global-energy-substitution?tab=chart" loading="lazy" style="width: 100%; height: 600px; border: 0px none;" allow="web-share; clipboard-write"></iframe>
+<iframe src="https://ourworldindata.org/grapher/electricity-source-scale-up?time=earliest..latest&tab=line" loading="lazy" style="width: 100%; height: 600px; border: 0px none;" allow="web-share; clipboard-write"></iframe>
+
+
 

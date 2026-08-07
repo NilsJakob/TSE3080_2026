@@ -1,4 +1,4 @@
-title: Electrical Power Systems Introduction
+title: Electrical Machines Introduction
 author: Nils Jakob Johannesen
 copyright: "2026"
 
@@ -8,7 +8,7 @@ execute:
 only_build_toc_files: true
 
 repository:
-  url: https://github.com/nilsjakob/power_systems_intro-book
+  url: https://nilsjakob.github.io/TSE3080_2026/
   branch: main
   path_to_book: ""
 

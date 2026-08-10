@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Per unit &#8212; Electrical Machines Introduction</title>
+    <title>TSE3080 &#8212; Electrical Machines Introduction</title>
   
   
   
@@ -65,13 +65,11 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = '11_polyphase/pu';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '01_introduction/TSE3080';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="One-Line Diagram" href="oneline.html" />
-    <link rel="prev" title="Per phase equivalent" href="perphase_eq.html" />
+    <link rel="next" title="Fundamentals" href="../02_fundamentals/fundamentals.html" />
+    <link rel="prev" title="Introduction" href="introduction.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -170,9 +168,9 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../00_preface/preface.html">How to use this book</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Introduction</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../01_introduction/introduction.html">Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../01_introduction/TSE3080.html">TSE3080</a></li>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">TSE3080</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Fundamentals</span></p>
 <ul class="nav bd-sidenav">
@@ -188,13 +186,13 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../05_a_history_intro/electric_power_timeline.html">Laws in Electric Power Engineering – Timeline</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">AC circuits</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="polyphase_systems.html">Polyphase systems</a></li>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../11_polyphase/polyphase_systems.html">Polyphase systems</a></li>
 
 <li class="toctree-l1"><a class="reference internal" href="../04_threephase/threephase.html">Three-Phase Circuits</a></li>
-<li class="toctree-l1"><a class="reference internal" href="perphase_eq.html">Per phase equivalent</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Per unit</a></li>
-<li class="toctree-l1"><a class="reference internal" href="oneline.html">One-Line Diagram</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../11_polyphase/perphase_eq.html">Per phase equivalent</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../11_polyphase/pu.html">Per unit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../11_polyphase/oneline.html">One-Line Diagram</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">References</span></p>
 <ul class="nav bd-sidenav">
@@ -253,7 +251,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/11_polyphase/pu.ipynb" target="_blank"
+      <li><a href="../_sources/01_introduction/TSE3080.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -324,9 +322,7 @@ document.write(`
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</label>
+
 </div></div>
       
     </div>
@@ -337,24 +333,11 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Per unit</h1>
+    <h1>TSE3080</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#system-base-power-base-s-b">System Base/Power base (<span class="math notranslate nohighlight">\(S_b\)</span>)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#voltage-base-v-b">Voltage base (<span class="math notranslate nohighlight">\(V_b\)</span>)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#base-impedance">Base Impedance</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#per-unit-impedance">Per-Unit Impedance</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-2-6">EXAMPLE 2.6</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#changing-the-base-of-per-unit-quantities">Changing the Base of Per-Unit Quantities</a></li>
-</ul>
-            </nav>
         </div>
     </div>
 </div>
@@ -364,146 +347,9 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="per-unit">
-<h1>Per unit<a class="headerlink" href="#per-unit" title="Permalink to this heading">#</a></h1>
-<p>Per unit quantities, or pu for short, are non-dimensional units</p>
-<section id="system-base-power-base-s-b">
-<h2>System Base/Power base (<span class="math notranslate nohighlight">\(S_b\)</span>)<a class="headerlink" href="#system-base-power-base-s-b" title="Permalink to this heading">#</a></h2>
-<div class="math notranslate nohighlight">
-\[
-S_{\text{base}}
-=
-\text{base MVA}_{3\phi}
-\]</div>
-</section>
-<section id="voltage-base-v-b">
-<h2>Voltage base (<span class="math notranslate nohighlight">\(V_b\)</span>)<a class="headerlink" href="#voltage-base-v-b" title="Permalink to this heading">#</a></h2>
-<div class="math notranslate nohighlight">
-\[
-V_{\text{base}}
-= {\text{base voltage, kV}_{LL}}
-\]</div>
-</section>
-<section id="base-impedance">
-<h2>Base Impedance<a class="headerlink" href="#base-impedance" title="Permalink to this heading">#</a></h2>
-<div class="math notranslate nohighlight">
-\[
-Z_{base} = \frac{V_{base}^2}{S_{base}} = \frac{\text{base voltage, k}V_{LL}^2}{\text{base MVA}_{3\phi}}
-\]</div>
-<div class="math notranslate nohighlight">
-\[
-Z_{base} = \frac{V_{base_{LN}}}{I_{base}}
-\]</div>
-</section>
-<section id="per-unit-impedance">
-<h2>Per-Unit Impedance<a class="headerlink" href="#per-unit-impedance" title="Permalink to this heading">#</a></h2>
-<div class="math notranslate nohighlight">
-\[
-\text{Per-unit impedance of an element}
-=
-\frac{\text{actual impedance, }\Omega}
-{\text{base impedance, }\Omega}
-\]</div>
-</section>
-<section id="example-2-6">
-<h2>EXAMPLE 2.6<a class="headerlink" href="#example-2-6" title="Permalink to this heading">#</a></h2>
-<p>Solve example 2.4 by using per unit.
-The terminal voltage of a Y-connected load consisting of three equal impedances of <span class="math notranslate nohighlight">\(20\angle30^{\circ}\Omega\)</span> is 4.4 kV line to line. The impedance
-of each of the three lines connecting the load to a bus at a substation is <span class="math notranslate nohighlight">\(Z_L = 1.4\angle75^{\circ}\Omega\)</span>.</p>
-<p>Find the line-to-line voltage at the substation bus.</p>
-<div class="cell tag_remove-input docutils container">
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Load phase voltage = 2540.3 ∠0° V
-Load current = 127.0 ∠-30.0° A
-Line voltage drop = 177.8 ∠45.0° V
-Substation phase voltage = 2669.0 ∠2.7° V
-Substation line-line voltage = 4622.9 ∠32.7° V
-</pre></div>
-</div>
-<img alt="../_images/9ee5deab7723824ab92dbfd6b0473a575c731ae683b80e3dae93a4e052001cde.png" src="../_images/9ee5deab7723824ab92dbfd6b0473a575c731ae683b80e3dae93a4e052001cde.png" />
-<img alt="../_images/64dc3241abea5fc2ae9e3b6cc60c241239983cc97130bec7007edca70136585e.png" src="../_images/64dc3241abea5fc2ae9e3b6cc60c241239983cc97130bec7007edca70136585e.png" />
-</div>
-</div>
-<div class="cell tag_remove-input docutils container">
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Zbase = (4400/sqrt(3))/127 = 20.0027 Ω
-Base impedance is 20.0 Ω
-Z = ZL_cp/Zbase = 0.0700 ∠ 75.00° per unit
-The line impedance is 0.0700 ∠ 75.00° per unit
-Ian_pu = Ian/Ibase = 1.00 ∠ -30.00° per unit
-Van = 1 + Ian_pu*Z = 1.0507 ∠ 2.70° per unit
-The line-to-neutral voltage at the substation Van is 1.0507 per unit with angle 2.70°
-VLN = |Van| * Vbase/sqrt(3) = 2669.05 V
-The magnitude of line-to-neutral voltage at the substation bus is 2669.05 V
-VLL = |Van| * Vbase = 4622.92 V
-The magnitude of line-to-line voltage at the substation bus is 4622.92 V
-</pre></div>
-</div>
-<img alt="../_images/4829620fb4bc6eabf53ad2775badc0645a4def3525b98d8cbd34af3c6b3396f5.png" src="../_images/4829620fb4bc6eabf53ad2775badc0645a4def3525b98d8cbd34af3c6b3396f5.png" />
-</div>
-</div>
-</section>
-<section id="changing-the-base-of-per-unit-quantities">
-<h2>Changing the Base of Per-Unit Quantities<a class="headerlink" href="#changing-the-base-of-per-unit-quantities" title="Permalink to this heading">#</a></h2>
-<p>To change from per-unit impedance on a given base to per-unit impedance on a new
-base, the following equation applies:</p>
-<div class="math notranslate nohighlight">
-\[
-Z_{pu_{new}} = Z_{pu_{given}} \bigg(\frac{base kV_{given}}{base kV_{new}}\bigg)^2 \bigg(\frac{base MVA_{new}}{base MVA_{given}}\bigg)
-\]</div>
-<p>Per-Unit Reactance Base Conversion</p>
-<p>The reactance of a generator designated X″ is given as 0.25 per unit based on
-the generator’s nameplate rating of 18 kV, 500 MVA. The base for calculations
-is 20 kV, 100 MVA. Find X″ on the new base.</p>
-<p>Given:
-X_old = 0.25 p.u.</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>S_old = 500 MVA
-
-V_old = 18 kV
-
-S_new = 100 MVA
-
-V_new = 20 kV
-</pre></div>
-</div>
-<p>Formula:
-X_new = X_old * (V_old / V_new)^2 * (S_new / S_old)
-$<span class="math notranslate nohighlight">\(
-X_{pu_{new}} = X_{pu_{given}} \bigg(\frac{V_{given}}{V_{new}}\bigg)^2 \bigg(\frac{S_{new}}{S_{given}}\bigg)
-\)</span>$
-Calculation:
-X_new = 0.25* (18 / 20)^2  * (100 / 500)</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>X_new = 0.25 * 0.2 * 0.81
-
-X_new = 0.0405 p.u.
-</pre></div>
-</div>
-<p>Answer:
-X’’ on the new base (20 kV, 100 MVA) = 0.0405 p.u.</p>
-<p>Python Code:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X_old</span> <span class="o">=</span> <span class="mf">0.25</span>
-<span class="n">S_old</span> <span class="o">=</span> <span class="mf">500.0</span>
-<span class="n">V_old</span> <span class="o">=</span> <span class="mf">18.0</span>
-
-<span class="n">S_new</span> <span class="o">=</span> <span class="mf">100.0</span>
-<span class="n">V_new</span> <span class="o">=</span> <span class="mf">20.0</span>
-
-<span class="n">X_new</span> <span class="o">=</span> <span class="n">X_old</span>  <span class="o">*</span> <span class="p">(</span><span class="n">V_old</span> <span class="o">/</span> <span class="n">V_new</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">*</span> <span class="p">(</span><span class="n">S_new</span> <span class="o">/</span> <span class="n">S_old</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;New reactance = </span><span class="si">{</span><span class="n">X_new</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2"> p.u.&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>New reactance = 0.0405 p.u.
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-</section>
+  <section class="tex2jax_ignore mathjax_ignore" id="tse3080">
+<h1>TSE3080<a class="headerlink" href="#tse3080" title="Permalink to this heading">#</a></h1>
+<img src="../images/frontpage.png" width="200"/></section>
 
     <script type="text/x-thebe-config">
     {
@@ -518,7 +364,7 @@ X’’ on the new base (20 kV, 100 MVA) = 0.0405 p.u.</p>
         },
         kernelOptions: {
             name: "python3",
-            path: "./11_polyphase"
+            path: "./01_introduction"
         },
         predefinedOutput: true
     }

@@ -24,15 +24,15 @@ parts:
     chapters:
       - file: 02_fundamentals/fundamentals
       - file: 03_circuits/representations      
-      - file: 02_fundamentals/A2_fundamentals
-      - file: 03_circuits/A3_basics
+      #- file: 02_fundamentals/A2_fundamentals
+      #- file: 03_circuits/A3_basics
       #- file: 04_threephase/A4_three_phase
 
   - caption: Electric circuits
     chapters:
       - file: 05_a_history_intro/electric_power_timeline
-      #- file: 05_basic_laws/basic_laws
-      #- file: 06_mesh/mesh_analysis
+      - file: 05_basic_laws/basic_laws
+      - file: 06_mesh/mesh_analysis
 
   #- caption: Circuit Theorems
     #chapters: 

@@ -1,4 +1,12 @@
 # TSE3080 Electrical Machines 2026
-This is a repo that contains the source code to the jupyter book introduction to electrical machines
- ## The book
- Go to the book by this link: https://nilsjakob.github.io/TSE3080_2026/
+
+This repository contains the source code for the Jupyter Book *Introduction to Electrical Machines*.
+
+## The Book
+
+Go to the book:
+https://nilsjakob.github.io/TSE3080_2026/
+
+## Lecture Slides
+
+Lecture 0 Slides: https://nilsjakob.github.io/TSE3080_2026/Lectures/Lecture0.slides.html

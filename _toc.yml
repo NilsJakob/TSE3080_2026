@@ -42,7 +42,7 @@ parts:
 
   - caption: AC circuits
     chapters:
-      #- file: 10_ac_circuits/ac_circuits
+      - file: 10_ac_circuits/ac_circuits
       - file: 11_polyphase/polyphase_systems
       - file: 04_threephase/threephase
       - file: 11_polyphase/perphase_eq

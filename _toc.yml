@@ -51,8 +51,8 @@ parts:
 
   - caption: Magnetic circuits
     chapters: 
-      -file: 12_magnetic_circuits/magnetic_fundamentals
-      -file: 12_magnetic_circuits/magnetic_circuits
+      - file: 12_magnetic_circuits/magnetic_fundamentals
+      - file: 12_magnetic_circuits/magnetic_circuits
 
   - caption: References
     chapters:

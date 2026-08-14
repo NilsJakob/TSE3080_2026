@@ -65,6 +65,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = '12_magnetic_circuits/magnetic_circuits';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -329,7 +331,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -345,6 +349,20 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#energy-losses-in-a-ferromagnetic-core">Energy Losses in a Ferromagnetic core</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#faraday-s-law-of-electromagnetic-induction">Faraday’s law of electromagnetic induction</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#voltage-induced-in-a-conductor">Voltage induced in a conductor</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lorentz-force-on-conductor">Lorentz force on conductor</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#direction-of-the-force-acting-on-a-straight-conductor">Direction of the force acting on a straight conductor</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -356,6 +374,105 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="magnetic-circuits">
 <h1>Magnetic circuits<a class="headerlink" href="#magnetic-circuits" title="Permalink to this heading">#</a></h1>
+<p>So we have seen that the current in a coil of wire wrapped around a core produces a magnetic flux in the core <span class="math notranslate nohighlight">\(\Phi\)</span><br />
+Theese equations are analogous to the those for an electric circuit
+<img width="500" src="../images/magnetic_and_elec_circ.png"
+     alt='Some'>
+<table>
+<tr>
+<td>
+<strong>Electric Circuit</strong>
+<br>
+Ohms law
+\begin{equation}
+V = I\cdot R
+\end{equation}
+V = electromotive force (emf)<br />
+I = current<br />
+R = resistance
+</td>
+<td>
+<strong>Magnetic circuit</strong>
+<br>
+Analogous to Ohms law
+\begin{equation}
+\mathcal{F} = \mathcal{\Phi} \mathcal{R}
+\end{equation}
+<span class="math notranslate nohighlight">\(\mathcal{F}\)</span> = magnetomotive force (mmf) (Ni)<br />
+<span class="math notranslate nohighlight">\(\mathcal{\Phi}\)</span> = flux of circuit<br />
+<span class="math notranslate nohighlight">\(\mathcal{R}\)</span> = reluctance of circuit
+</td>
+</tr>
+</table></p>
+<section id="energy-losses-in-a-ferromagnetic-core">
+<h2>Energy Losses in a Ferromagnetic core<a class="headerlink" href="#energy-losses-in-a-ferromagnetic-core" title="Permalink to this heading">#</a></h2>
+<p>The main losses in electromagnetic processes are:</p>
+<ol class="arabic simple">
+<li><p>Hysteresis loss</p></li>
+<li><p>Eddy current loss</p></li>
+</ol>
+<p>In this lecture we will understand the losses, and in later lectures we will investigate how to model them</p>
+<section id="faraday-s-law-of-electromagnetic-induction">
+<h3>Faraday’s law of electromagnetic induction<a class="headerlink" href="#faraday-s-law-of-electromagnetic-induction" title="Permalink to this heading">#</a></h3>
+<p>Faradays law of electromagentic induction states the fundamental relationship between voltage and flux in a circuit</p>
+<ol class="arabic simple">
+<li><p>If the flux linking a loop (or turn) varies as a function of time, a voltage is induced between its terminals</p></li>
+<li><p>The value of the induced voltage is proportional to the rate of change of flux</p></li>
+</ol>
+<p>Described by
+<center> \begin{equation}
+emf = N\frac{\Delta \Phi}{\Delta t}
+\end{equation}</center>
+where<br />
+emf = electromotove force -induced voltage [V]<br />
+N = Number of turns in the coil<br />
+<span class="math notranslate nohighlight">\(\Delta \Phi\)</span> = change of flux inside the coil [Wb]<br />
+<span class="math notranslate nohighlight">\(\Delta t\)</span> = time interval during which the flux changes [s]</p>
+<p><a class="reference external" href="https://nationalmaglab.org/magnet-academy/watch-play/interactive-tutorials/electromagnetic-induction/">Electromagnetic Induction</a></p>
+</section>
+<section id="voltage-induced-in-a-conductor">
+<h3>Voltage induced in a conductor<a class="headerlink" href="#voltage-induced-in-a-conductor" title="Permalink to this heading">#</a></h3>
+<p>Easier to calculate length of conductors than whenever a concuctor cuts a magnetic field
+<center> \begin{equation}
+emf = Blv
+\end{equation}</center>
+where<br />
+emf = electromotive force -induced voltage [V]<br />
+B = flux density [T]<br />
+l = active length of the conductor in the magnetic field [m]<br />
+v = relative speed of the conductor [m/s]</p>
+</section>
+<section id="lorentz-force-on-conductor">
+<h3>Lorentz force on conductor<a class="headerlink" href="#lorentz-force-on-conductor" title="Permalink to this heading">#</a></h3>
+<center> \begin{equation}
+          F = BlI
+\end{equation}</center>
+<p>where<br />
+emf = electromotove force -induced voltage [V]<br />
+B = flux density [T]<br />
+l = active length of the conductor [m]<br />
+I = current in the conductor [A]</p>
+<p><a class="reference external" href="https://nationalmaglab.org/magnet-academy/watch-play/interactive-tutorials/lorentz-force">Lorentz Force</a></p>
+<p><img align="right" width="750" src="../images/magforce_setup.png"
+     alt='-'></p>
+</section>
+<section id="direction-of-the-force-acting-on-a-straight-conductor">
+<h3>Direction of the force acting on a straight conductor<a class="headerlink" href="#direction-of-the-force-acting-on-a-straight-conductor" title="Permalink to this heading">#</a></h3>
+<p>A current carrying conductor in a magnetic field will assert a force.</p>
+<p>The force is given by how the magnetic field lines aligns itself</p>
+<p>Magnetic field lines goes out of the North pole and into the South pole</p>
+<p>A cross gives the direction of current going into the page. According to Maxwells right hand rule (corkscrew) the circular lines of force are given in (a)</p>
+<p>Yet magnetic field lines will never cross each other, but align up in such a manner that the magnetic field above the conductor will add, and the magnetic field beneth the conductor will cancel each other out, so that in the end there is more magnetic field lines above.</p>
+<p>The force excelled on the conductor is going down.</p>
+<p><a class="reference external" href="https://nationalmaglab.org/magnet-academy/watch-play/interactive-tutorials/inductive-reactance/">Inductive Reactance</a></p>
+<p><img align="right" width="500" src="../images/magforce_cross.png"
+     alt='-'></p>
+<p><img align="right" width="750" src="../images/magforce_combined.png"
+     alt='-'></p>
+<p><img align="right" width="750" src="../images/magforce_sum.png"
+     alt='-'></p>
+</section>
+</section>
 </section>
 
     <script type="text/x-thebe-config">

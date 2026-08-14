@@ -487,22 +487,19 @@ courtesy of Wikimedia Commons.
     \oint H \cdot dl = i_{net}
     \end{equation} </center>
 <p>where H is the magnetic field intensity produced by the current <span class="math notranslate nohighlight">\(i_{net}\)</span></p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This is a test.</p>
-</div>
-<a class="reference internal image-reference" href="../_images/magnetic_core.png"><img alt="../_images/magnetic_core.png" src="../_images/magnetic_core.png" style="width: 500px;" /></a>
 <figure class="align-default" id="fig-magnetic-core">
 <a class="reference internal image-reference" href="../_images/magnetic_core.png"><img alt="../_images/magnetic_core.png" src="../_images/magnetic_core.png" style="width: 500px;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 1 </span><span class="caption-text">Magnetic core with coil.</span><a class="headerlink" href="#fig-magnetic-core" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p><img align="left"
+<!-- RISE version
+<img align="left"
      width="500"
      src="../images/magnetic_core.png"
      alt="Some"
-     style="margin-right:20px; margin-bottom:10px;"></p>
+     style="margin-right:20px; margin-bottom:10px;">
+-->
 </section>
 <section id="ferromagnetic-material">
 <h6>Ferromagnetic material<a class="headerlink" href="#ferromagnetic-material" title="Permalink to this heading">#</a></h6>
@@ -510,22 +507,24 @@ courtesy of Wikimedia Commons.
 <p>The current passing within the path of integration <span class="math notranslate nohighlight">\(I_{net}\)</span> is <span class="math notranslate nohighlight">\(Ni\)</span></p>
 <p>Since the coil of wire cuts the path of integration N times while carrying the current i:</p>
 <p>This</p>
-  <center> \begin{equation}
-    \oint H \cdot dl = i_{net}
-    \end{equation} </center>
-<p>Becomes This</p>
-  <center> \begin{equation}
-  Hl_c = Ni
-    \end{equation} </center>
-<p>OBS: we will deal with losses later</p>
+<div class="math notranslate nohighlight">
+\[
+\oint H \cdot dl = i_{net}
+\]</div>
+<p>Becomes</p>
+<div class="math notranslate nohighlight">
+\[
+H l_c = Ni
+\]</div>
+<p><strong>OBS:</strong> We will deal with losses later.</p>
 </section>
 </section>
 <section id="magnetic-field-strength-h-and-magnetic-flux-density-b">
 <h5>Magnetic field strength H and magnetic flux density B<a class="headerlink" href="#magnetic-field-strength-h-and-magnetic-flux-density-b" title="Permalink to this heading">#</a></h5>
 <p>Whenever a magnetic flux <span class="math notranslate nohighlight">\(\phi\)</span> exists in a body or component, it is due to the presence of a magnetic field strength H given by:
-<center> \begin{equation}
-H = \frac{\mathcal{F=Ni}}{l}
-\end{equation} </center>
+$<span class="math notranslate nohighlight">\(
+                 H = \frac{\mathcal{F=Ni}}{l}
+\)</span>$
 where</p>
 <p>H = magnetic field strength [A/m]<br />
 <span class="math notranslate nohighlight">\(\mathcal{F}\)</span> = U = magnetomotiveforce (mmf) acting on the component [A] (or ampereturn)<br />
@@ -542,28 +541,29 @@ A = cross section of the component [<span class="math notranslate nohighlight">\
 <section id="b-h-curve">
 <h5>B-H curve<a class="headerlink" href="#b-h-curve" title="Permalink to this heading">#</a></h5>
 <p>There is a definitive relationship between the magnetic flux density (B) and the magnetic field strength (H) of any material. This is expressed by the BH-curve.<br />
-In vacuum, the magnetic flux density B and the magnetic field strength H is directly proportional and is expressed by:</p>
-<center> \begin{equation}
+In vacuum, the magnetic flux density B and the magnetic field strength H is directly proportional and is expressed by:
+$<span class="math notranslate nohighlight">\(
                  B = \mu_0\cdot H
-             \end{equation} </center>
-where
+\)</span>$
+where</p>
 <p>B = magnetic flux density [T]<br />
 H = magnetic field strength [A/m]<br />
 <span class="math notranslate nohighlight">\(\mu_0\)</span> = magnetic constant [=<span class="math notranslate nohighlight">\(4\pi \cdot 10^{-7}\)</span>]</p>
-<p>Hence, permeability is:</p>
-<center> \begin{equation}
+<p>Hence, permeability is:
+$<span class="math notranslate nohighlight">\(
                  \mu = \frac{B}{H}
-             \end{equation} </center>
+\)</span><span class="math notranslate nohighlight">\(
 And relative permeability:
-<center> \begin{equation}
+\)</span><span class="math notranslate nohighlight">\(
                    \mu_r = \frac{\mu}{\mu_0}
-             \end{equation} </center></section>
+\)</span>$</p>
+</section>
 </section>
 <section id="id1">
 <h4>B-H curve<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h4>
 <p>The Permeability in vacuum is driven by the magnetic constant <span class="math notranslate nohighlight">\(\mu_0\)</span>, which states the relationship between B and H.</p>
-<center> **Table permeability in vacuum** </center>
-<div class="pst-scrollable-table-container"><table class="table">
+<div class="pst-scrollable-table-container"><table class="table" id="permeability-vac">
+<caption><span class="caption-number">Table 1 </span><span class="caption-text">Permeability in vacuum</span><a class="headerlink" href="#permeability-vac" title="Permalink to this table">#</a></caption>
 <thead>
 <tr class="row-odd"><th class="head text-center"><p>H (amp/m)</p></th>
 <th class="head text-center"><p>B (mT)</p></th>
@@ -700,14 +700,12 @@ And relative permeability:
 <img alt="../_images/c360da571a3d6d770ead804576ef744a0a40c9d9be32d2ad601e515e1a3d3fe6.png" src="../_images/c360da571a3d6d770ead804576ef744a0a40c9d9be32d2ad601e515e1a3d3fe6.png" />
 </div>
 </div>
-<p><img align="right" width="650" src="BH_STEEL.png"
-     alt='-'></p>
 </section>
 </section>
 <section id="permeability-of-ferromagnetic-material-steel">
 <h3>Permeability of Ferromagnetic Material (Steel)<a class="headerlink" href="#permeability-of-ferromagnetic-material-steel" title="Permalink to this heading">#</a></h3>
-<center>**Table permeability Ferromagnetic Material (Steel)**</center>
-<div class="pst-scrollable-table-container"><table class="table">
+<div class="pst-scrollable-table-container"><table class="table" id="permeability-ferro">
+<caption><span class="caption-number">Table 2 </span><span class="caption-text">Permeability of Ferromagnetic Material (Steel)</span><a class="headerlink" href="#permeability-ferro" title="Permalink to this table">#</a></caption>
 <thead>
 <tr class="row-odd"><th class="head text-center"><p>H (amp/m)</p></th>
 <th class="head text-center"><p>B (T)</p></th>

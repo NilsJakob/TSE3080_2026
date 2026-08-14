@@ -49,6 +49,11 @@ parts:
       - file: 11_polyphase/pu
       - file: 11_polyphase/oneline
 
+  - caption: Magnetic circuits
+    chapters: 
+      -file: 12_magnetic_circuits/magnetic_fundamentals
+      -file: 12_magnetic_circuits/magnetic_circuits
+
   - caption: References
     chapters:
       - file: references

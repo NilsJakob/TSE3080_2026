@@ -1,0 +1,1037 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Magnetic fundamentals &#8212; Electrical Machines Introduction</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/override.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '12_magnetic_circuits/magnetic_fundamentals';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Magnetic circuits" href="magnetic_circuits.html" />
+    <link rel="prev" title="One-Line Diagram" href="../11_polyphase/oneline.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Electrical Machines Introduction</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Preface</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../00_preface/author.html">About the author</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../00_preface/office.html">My office</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../00_preface/preface.html">How to use this book</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Introduction</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../01_introduction/introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../01_introduction/TSE3080.html">TSE3080 Electrical Machines</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Fundamentals</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../02_fundamentals/fundamentals.html">Fundamentals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../03_circuits/representations.html">Basic representations</a></li>
+
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Electric circuits</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../05_a_history_intro/electric_power_timeline.html">Laws in Electric Power Engineering – Timeline</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../05_basic_laws/basic_laws.html">Electric circuits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../06_mesh/mesh_analysis.html">Mesh Analysis</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">AC circuits</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../10_ac_circuits/ac_circuits.html">AC Circuits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../11_polyphase/polyphase_systems.html">Polyphase systems</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../04_threephase/threephase.html">Three-Phase Circuits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../11_polyphase/perphase_eq.html">Per phase equivalent</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../11_polyphase/pu.html">Per unit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../11_polyphase/oneline.html">One-Line Diagram</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Magnetic circuits</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Magnetic fundamentals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="magnetic_circuits.html">Magnetic circuits</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">References</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../references.html">Referanser</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/12_magnetic_circuits/magnetic_fundamentals.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Magnetic fundamentals</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fundamentals-of-electricity-magnetism-and-circuits">Fundamentals of Electricity, Magnetism and Circuits</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#electromagnetism">Electromagnetism</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-rules">The rules</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#links">Links</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#magnetic-field">Magnetic field</a><ul class="nav section-nav flex-column">
+<li class="toc-h6 nav-item toc-entry"><a class="reference internal nav-link" href="#production-of-a-magnetic-field">Production of a magnetic field</a></li>
+<li class="toc-h6 nav-item toc-entry"><a class="reference internal nav-link" href="#ferromagnetic-material">Ferromagnetic material</a></li>
+</ul>
+</li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#magnetic-field-strength-h-and-magnetic-flux-density-b">Magnetic field strength H and magnetic flux density B</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#b-h-curve">B-H curve</a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">B-H curve</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#permeability-of-ferromagnetic-material-steel">Permeability of Ferromagnetic Material (Steel)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#relative-evaluation-of-permeability">Relative evaluation of permeability</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="magnetic-fundamentals">
+<h1>Magnetic fundamentals<a class="headerlink" href="#magnetic-fundamentals" title="Permalink to this heading">#</a></h1>
+<section id="fundamentals-of-electricity-magnetism-and-circuits">
+<h2>Fundamentals of Electricity, Magnetism and Circuits<a class="headerlink" href="#fundamentals-of-electricity-magnetism-and-circuits" title="Permalink to this heading">#</a></h2>
+<section id="electromagnetism">
+<h3>Electromagnetism<a class="headerlink" href="#electromagnetism" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Electromagnetism</p>
+<ul>
+<li><p>Magnetic field strength H and magnetic flux density B</p></li>
+<li><p>B-H curve of vacum</p></li>
+<li><p>B-H curve of magnetic material</p></li>
+<li><p>Determining the relative permeability</p></li>
+<li><p>Faraday’s law of electromagnetic induction</p></li>
+<li><p>Voltage induced in a conductor</p></li>
+<li><p>Lorentz force on conductor</p></li>
+<li><p>Direction of the force acting on a straight conductor</p></li>
+<li><p>Residual flux density and coercive force</p></li>
+<li><p>Hysteresis Loop</p></li>
+<li><p>Hysteresis loss</p></li>
+<li><p>Eddy currents</p></li>
+</ul>
+</li>
+</ul>
+<div style="display:flex; align-items:center; gap:0px;">
+  <div align="center">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/1/15/LeftHandOutline.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=original"  <b>Fleming</b><br>
+    1902
+  </div>
+  <div style="width:200px; font-size:18px; text-align:left; line-height:1.2; margin-left:-15px;">
+    Fleming's left-hand rule.
+  </div>
+</div>
+IMAGE CREDITS
+courtesy of Wikimedia Commons.
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/Fleming%27s_left-hand_rule_for_motors#/media/File:LeftHandOutline.png">https://en.wikipedia.org/wiki/Fleming’s_left-hand_rule_for_motors#/media/File:LeftHandOutline.png</a></p>
+<div style="display:flex; align-items:center; gap:0px;">
+<div style="width:200px; font-size:18px; text-align:left; line-height:1.2; margin-left:75px;">
+    Fleming's right-hand rule.
+  </div>
+      <div align="center">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/RightHandOutline.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original"  <b>Fleming</b><br>
+    1902
+  </div>
+</div>
+<p>IMAGE CREDITS
+courtesy of Wikimedia Commons.</p>
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/Fleming%27s_left-hand_rule_for_motors#/media/File:RightHandOutline.png">https://en.wikipedia.org/wiki/Fleming’s_left-hand_rule_for_motors#/media/File:RightHandOutline.png</a></p>
+<p>Fleming, John Ambrose (1902). Magnets and Electric Currents: An Elementary Treatise for the Use of Electrical Artisans and Science Teachers. E. &amp; F.N. Spon, limited.</p>
+<div style="display:flex; align-items:center; gap:0px;">
+  <div align="center">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Manoderecha.svg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=original"  <b>Ampere</b><br>
+  </div>
+  <div style="width:200px; font-size:18px; text-align:left; line-height:1.2; margin-left:-15px;">
+    Right hand rule
+  </div>
+</div>
+IMAGE CREDITS
+courtesy of Wikimedia Commons.
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/Right-hand_rule#/media/File:Manoderecha.svg">https://en.wikipedia.org/wiki/Right-hand_rule#/media/File:Manoderecha.svg</a></p>
+<div style="display:flex; align-items:center; gap:0px;">
+  <div align="center">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d0/Coil_right-hand_rule.svg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=original"  <b>Ampere</b><br>
+  </div>
+  <div style="width:200px; font-size:18px; text-align:left; line-height:1.2; margin-left:-15px;">
+    Right hand rule
+  </div>
+</div>
+IMAGE CREDITS
+courtesy of Wikimedia Commons.
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/Right-hand_rule#/media/File:Coil_right-hand_rule.svg">https://en.wikipedia.org/wiki/Right-hand_rule#/media/File:Coil_right-hand_rule.svg</a></p>
+</section>
+<section id="the-rules">
+<h3>The rules<a class="headerlink" href="#the-rules" title="Permalink to this heading">#</a></h3>
+<section id="links">
+<h4>Links<a class="headerlink" href="#links" title="Permalink to this heading">#</a></h4>
+<p><a class="reference external" href="https://nationalmaglab.org/magnet-academy/watch-play/interactive-tutorials/magnetic-domains/">MagneticDomains</a><br />
+<a class="reference external" href="https://nationalmaglab.org/magnet-academy/watch-play/interactive-tutorials/magnetic-field-around-a-wire-i/">MagnetidFieldAroundAWire</a><br />
+<a class="reference external" href="https://nationalmaglab.org/magnet-academy/watch-play/see-thru-science/right-and-left-hand-rules/">RightHandAndLeftHandRules</a><br />
+<a class="reference external" href="https://nationalmaglab.org/magnet-academy/watch-play/see-thru-science/right-and-left-hand-rules/">MagneticFieldOfASolenoid</a>
+<a class="reference external" href="https://medium.com/&#64;nils.j.johannesen/magnetic-coupling-eb7a78fa7668">MagneticCoupling</a></p>
+<section id="magnetic-field">
+<h5>Magnetic field<a class="headerlink" href="#magnetic-field" title="Permalink to this heading">#</a></h5>
+<p>The magnetic field are the fundamental mechanism by which energy is converted from one form to another in motors, generators, and transformers.</p>
+<p>4 Basic principles where magnetic fields are used in these devices</p>
+<ol class="arabic simple">
+<li><p>A current-carrying wire produces a magnetic field in the area around it</p></li>
+<li><p>A time-changing magnetic field induces a voltage in a coil of wire if it passes through that coil (Transformer action)</p></li>
+<li><p>A current-carryng wire in the presence of a magnetid field has a force induced on it (Motor action)</p></li>
+<li><p>A moving wire in the presence of magnetic field has a voltage induced in it (Generator action)</p></li>
+</ol>
+<p><a class="reference external" href="https://nationalmaglab.org/magnet-academy/watch-play/interactive-tutorials/electromagnetic-induction/">Electromagnetic Induction</a>
+<a class="reference external" href="https://nationalmaglab.org/magnet-academy/watch-play/interactive-tutorials/lorentz-force">Lorentz Force</a>
+<a class="reference external" href="https://nationalmaglab.org/magnet-academy/watch-play/interactive-tutorials/lorentz-force">Inductive Reactance</a>
+<a class="reference external" href="https://nationalmaglab.org/magnet-academy/watch-play/interactive-tutorials/alternating-current/">Alternating Current</a></p>
+<section id="production-of-a-magnetic-field">
+<h6>Production of a magnetic field<a class="headerlink" href="#production-of-a-magnetic-field" title="Permalink to this heading">#</a></h6>
+<p>Principle one is defined by Ampere’s law:</p>
+   <center> \begin{equation}
+    \oint H \cdot dl = i_{net}
+    \end{equation} </center>
+<p>where H is the magnetic field intensity produced by the current <span class="math notranslate nohighlight">\(i_{net}\)</span></p>
+<p><img align="left"
+     width="500"
+     src="../images/magnetic_core.png"
+     alt="Some"
+     style="margin-right:20px; margin-bottom:10px;"></p>
+</section>
+<section id="ferromagnetic-material">
+<h6>Ferromagnetic material<a class="headerlink" href="#ferromagnetic-material" title="Permalink to this heading">#</a></h6>
+<p>If the core of the component in the image is composed of iron or similar metals essentially all the magnetic field produced by the current will remain inside the core, so the path of integration is the length of the core <span class="math notranslate nohighlight">\(l_c\)</span></p>
+<p>The current passing within the path of integration <span class="math notranslate nohighlight">\(I_{net}\)</span> is <span class="math notranslate nohighlight">\(Ni\)</span></p>
+<p>Since the coil of wire cuts the path of integration N times while carrying the current i:</p>
+<p>This</p>
+  <center> \begin{equation}
+    \oint H \cdot dl = i_{net}
+    \end{equation} </center>
+<p>Becomes This</p>
+  <center> \begin{equation}
+  Hl_c = Ni
+    \end{equation} </center>
+<p>OBS: we will deal with losses later</p>
+</section>
+</section>
+<section id="magnetic-field-strength-h-and-magnetic-flux-density-b">
+<h5>Magnetic field strength H and magnetic flux density B<a class="headerlink" href="#magnetic-field-strength-h-and-magnetic-flux-density-b" title="Permalink to this heading">#</a></h5>
+<p>Whenever a magnetic flux <span class="math notranslate nohighlight">\(\phi\)</span> exists in a body or component, it is due to the presence of a magnetic field strength H given by:
+<center> \begin{equation}
+H = \frac{\mathcal{F=Ni}}{l}
+\end{equation} </center>
+where</p>
+<p>H = magnetic field strength [A/m]<br />
+<span class="math notranslate nohighlight">\(\mathcal{F}\)</span> = U = magnetomotiveforce (mmf) acting on the component [A] (or ampereturn)<br />
+l = length of component [m]<br />
+The resulting magnetic flux density is given by</p>
+<center> \begin{equation}
+                 B = \frac{\phi}{A}
+             \end{equation} </center>
+where
+<p>B = magnetic flux density [T]<br />
+<span class="math notranslate nohighlight">\(\phi\)</span> = flux in the component [Wb]<br />
+A = cross section of the component [<span class="math notranslate nohighlight">\(m^2\)</span>]</p>
+</section>
+<section id="b-h-curve">
+<h5>B-H curve<a class="headerlink" href="#b-h-curve" title="Permalink to this heading">#</a></h5>
+<p>There is a definitive relationship between the magnetic flux density (B) and the magnetic field strength (H) of any material. This is expressed by the BH-curve.<br />
+In vacuum, the magnetic flux density B and the magnetic field strength H is directly proportional and is expressed by:</p>
+<center> \begin{equation}
+                 B = \mu_0\cdot H
+             \end{equation} </center>
+where
+<p>B = magnetic flux density [T]<br />
+H = magnetic field strength [A/m]<br />
+<span class="math notranslate nohighlight">\(\mu_0\)</span> = magnetic constant [=<span class="math notranslate nohighlight">\(4\pi \cdot 10^{-7}\)</span>]</p>
+<p>Hence, permeability is:</p>
+<center> \begin{equation}
+                 \mu = \frac{B}{H}
+             \end{equation} </center>
+And relative permeability:
+<center> \begin{equation}
+                   \mu_r = \frac{\mu}{\mu_0}
+             \end{equation} </center></section>
+</section>
+<section id="id1">
+<h4>B-H curve<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h4>
+<p>The Permeability in vacuum is driven by the magnetic constant <span class="math notranslate nohighlight">\(\mu_0\)</span>, which states the relationship between B and H.</p>
+<center> **Table permeability in vacuum** </center>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-center"><p>H (amp/m)</p></th>
+<th class="head text-center"><p>B (mT)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p>0</p></td>
+<td class="text-center"><p>0</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>100</p></td>
+<td class="text-center"><p>0.125</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>200</p></td>
+<td class="text-center"><p>0.251</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>300</p></td>
+<td class="text-center"><p>0.377</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>400</p></td>
+<td class="text-center"><p>0.5</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>500</p></td>
+<td class="text-center"><p>0.628</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>600</p></td>
+<td class="text-center"><p>0.753</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>700</p></td>
+<td class="text-center"><p>0.879</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>800</p></td>
+<td class="text-center"><p>1</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>900</p></td>
+<td class="text-center"><p>1.13</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>1000</p></td>
+<td class="text-center"><p>1.257</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># import libraries</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># The permeability constant, in vacuum or free space</span>
+<span class="n">mu_0</span> <span class="o">=</span> <span class="mi">4</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="mi">10</span><span class="o">**-</span><span class="mi">7</span>
+<span class="n">H_mu0</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="mi">200</span><span class="p">,</span><span class="mi">300</span><span class="p">,</span><span class="mi">400</span><span class="p">,</span><span class="mi">500</span><span class="p">,</span><span class="mi">600</span><span class="p">,</span><span class="mi">700</span><span class="p">,</span><span class="mi">800</span><span class="p">,</span><span class="mi">900</span><span class="p">,</span><span class="mi">1000</span><span class="p">])</span>
+<span class="n">B_mu0</span> <span class="o">=</span> <span class="n">mu_0</span> <span class="o">*</span> <span class="n">H_mu0</span>
+<span class="n">d1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">H_mu0</span><span class="p">,</span><span class="n">B_mu0</span><span class="p">])</span>
+<span class="n">d</span> <span class="o">=</span> <span class="n">d1</span><span class="o">.</span><span class="n">T</span>
+<span class="n">d</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[0.00000000e+00, 0.00000000e+00],
+       [1.00000000e+02, 1.25663706e-04],
+       [2.00000000e+02, 2.51327412e-04],
+       [3.00000000e+02, 3.76991118e-04],
+       [4.00000000e+02, 5.02654825e-04],
+       [5.00000000e+02, 6.28318531e-04],
+       [6.00000000e+02, 7.53982237e-04],
+       [7.00000000e+02, 8.79645943e-04],
+       [8.00000000e+02, 1.00530965e-03],
+       [9.00000000e+02, 1.13097336e-03],
+       [1.00000000e+03, 1.25663706e-03]])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create the plot</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span> <span class="c1"># Adjust figure size as needed</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">H_mu0</span><span class="p">,</span> <span class="n">B_mu0</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;B-H Curve&#39;</span><span class="p">)</span>
+
+<span class="c1"># Add labels and title</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Magnetic Field Strength (H) [A/m]&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Magnetic Flux Density (B) [Tesla]&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;B-H Curve of a Magnetic Material&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/aed5718848311595815114308506e447ba61886f13cde8b4664f1f0c52bae473.png" src="../_images/aed5718848311595815114308506e447ba61886f13cde8b4664f1f0c52bae473.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Plotting the rleative permeability to H-field</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">B_mu0</span><span class="p">))</span>
+<span class="n">mu</span> <span class="o">=</span> <span class="n">B_mu0</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">10</span><span class="p">]</span><span class="o">/</span><span class="n">H_mu0</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">10</span><span class="p">]</span>
+<span class="n">mu</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>11
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([1.25663706e-06, 1.25663706e-06, 1.25663706e-06, 1.25663706e-06,
+       1.25663706e-06, 1.25663706e-06, 1.25663706e-06, 1.25663706e-06,
+       1.25663706e-06])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create the plot</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span> <span class="c1"># Adjust figure size as needed</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">H_mu0</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">10</span><span class="p">],</span> <span class="n">mu</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;B-H Curve&#39;</span><span class="p">)</span>
+
+<span class="c1"># Add labels and title</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Magnetic Field Strength (H) [A/m]&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Permeability (mu)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;B-H Curve of a Ferromagnetic Material&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/c360da571a3d6d770ead804576ef744a0a40c9d9be32d2ad601e515e1a3d3fe6.png" src="../_images/c360da571a3d6d770ead804576ef744a0a40c9d9be32d2ad601e515e1a3d3fe6.png" />
+</div>
+</div>
+<p><img align="right" width="650" src="BH_STEEL.png"
+     alt='-'></p>
+</section>
+</section>
+<section id="permeability-of-ferromagnetic-material-steel">
+<h3>Permeability of Ferromagnetic Material (Steel)<a class="headerlink" href="#permeability-of-ferromagnetic-material-steel" title="Permalink to this heading">#</a></h3>
+<center>**Table permeability Ferromagnetic Material (Steel)**</center>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-center"><p>H (amp/m)</p></th>
+<th class="head text-center"><p>B (T)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p>0</p></td>
+<td class="text-center"><p>0</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>40</p></td>
+<td class="text-center"><p>0.14</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>50</p></td>
+<td class="text-center"><p>0.275</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>60</p></td>
+<td class="text-center"><p>0.385</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>70</p></td>
+<td class="text-center"><p>0.5</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>80</p></td>
+<td class="text-center"><p>0.58</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>90</p></td>
+<td class="text-center"><p>0.65</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>100</p></td>
+<td class="text-center"><p>0.7</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>200</p></td>
+<td class="text-center"><p>1.1</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>300</p></td>
+<td class="text-center"><p>1.25</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>400</p></td>
+<td class="text-center"><p>1.375</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>500</p></td>
+<td class="text-center"><p>1.4</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>600</p></td>
+<td class="text-center"><p>1.425</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">H</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">40</span><span class="p">,</span><span class="mi">50</span><span class="p">,</span><span class="mi">60</span><span class="p">,</span><span class="mi">70</span><span class="p">,</span><span class="mi">80</span><span class="p">,</span><span class="mi">90</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="mi">200</span><span class="p">,</span><span class="mi">300</span><span class="p">,</span><span class="mi">400</span><span class="p">,</span><span class="mi">500</span><span class="p">,</span><span class="mi">600</span><span class="p">])</span>
+<span class="n">B</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.14</span><span class="p">,</span><span class="mf">0.275</span><span class="p">,</span><span class="mf">0.385</span><span class="p">,</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">0.58</span><span class="p">,</span><span class="mf">0.65</span><span class="p">,</span><span class="mf">0.7</span><span class="p">,</span><span class="mf">1.1</span><span class="p">,</span><span class="mf">1.25</span><span class="p">,</span><span class="mf">1.375</span><span class="p">,</span><span class="mf">1.4</span><span class="p">,</span><span class="mf">1.425</span><span class="p">])</span>
+
+<span class="c1"># Create the plot</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span> <span class="c1"># Adjust figure size as needed</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">H</span><span class="p">,</span> <span class="n">B</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;B-H Curve&#39;</span><span class="p">)</span>
+
+<span class="c1"># Add labels and title</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Magnetic Field Strength (H) [A/m]&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Magnetic Flux Density (B) [Tesla]&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;B-H Curve of a Ferromagnetic Material&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/f915709c6a5ca7de32401bcacaf906a4a7e064e908a713222f07388124d8cccf.png" src="../_images/f915709c6a5ca7de32401bcacaf906a4a7e064e908a713222f07388124d8cccf.png" />
+</div>
+</div>
+<p><a class="reference external" href="https://www.integratedsoft.com/calculator/magnetisation-curve-calculator">BHcalc</a></p>
+<p>The magnetic field strength of a ferromagnetic material at saturation typically ranges from 1 to 2 Tesla (T). This is the maximum magnetic field that the material can achieve when all its magnetic domains are aligned. For example, iron can reach a saturation magnetization of around 2.2 T, while nickel saturates at approximately 0.57 T.
+<a class="reference external" href="https://www.google.com/search?q=what+is+the+normal+Tesla+of+a+feromahnetic+material&amp;rlz=1C1CHBF_noNO988NO988&amp;oq=what+is+the+normal+Tesla+of+a+feromahnetic+material&amp;gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIHCAEQABjvBTIKCAIQABiABBiiBDIKCAMQABiABBiiBDIKCAQQABiABBiiBNIBCTEyNTE0ajBqN6gCCLACAfEFjXniNJmyzXo&amp;sourceid=chrome&amp;ie=UTF-8">Source</a></p>
+<p>We can calculate the relative permeability, remembering that</p>
+<center> \begin{equation}
+                   \mu_r = \frac{\mu}{\mu_0}
+             \end{equation} </center>
+According to Wikipedia the permeability of Iron is $6.3*10**-3$ H/m
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/Permeability_(electromagnetism)">Permeability</a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mu</span> <span class="o">=</span> <span class="p">(</span><span class="mf">6.3</span><span class="o">*</span><span class="mi">10</span><span class="o">**-</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">mu_0</span> <span class="o">=</span> <span class="p">(</span><span class="mi">4</span><span class="o">*</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="mi">10</span><span class="o">**-</span><span class="mi">7</span><span class="p">)</span>
+<span class="n">mu_r</span> <span class="o">=</span> <span class="n">mu</span><span class="o">/</span><span class="n">mu_0</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The Relative Permeability of Iron is&#39;</span><span class="p">,</span> <span class="n">mu_r</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The Relative Permeability of Iron is 5013.380707394703
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+
+<span class="c1"># Read the text file, specifying the delimiter if it&#39;s not a comma</span>
+<span class="c1"># For example, if tab-delimited: df = pd.read_csv(&quot;your_file.txt&quot;, delimiter=&#39;\t&#39;)</span>
+<span class="n">df1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;BH_1000_2T.txt&quot;</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">)</span> 
+<span class="c1"># </span>
+<span class="c1"># You can also save the DataFrame to a CSV file</span>
+<span class="c1">#df.to_csv(&quot;BH_1000_2T.csv&quot;, index=False) </span>
+<span class="c1"># Here we will use the file directly:</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>          H(A/m)      B(T)
+0       0.000000  0.000000
+1      48.284983  0.060719
+2      71.153012  0.089443
+3     104.851463  0.131702
+4     154.509683  0.193749
+5     227.686305  0.284469
+6     335.519772  0.415911
+7     494.423751  0.602688
+8     728.585516  0.857468
+9    1073.647559  1.177335
+10   1582.132854  1.520184
+11   2331.439536  1.800125
+12   3435.621918  1.951678
+13   5062.751051  1.999471
+14   7460.497348  2.009036
+15  10993.829268  2.013811
+16  16200.566308  2.020358
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">H</span> <span class="o">=</span> <span class="n">df1</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
+<span class="n">B</span> <span class="o">=</span> <span class="n">df1</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create the plot</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span> <span class="c1"># Adjust figure size as needed</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">H</span><span class="p">,</span> <span class="n">B</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;B-H Curve&#39;</span><span class="p">)</span>
+
+<span class="c1"># Add labels and title</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Magnetic Field Strength (H) [A/m]&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Magnetic Flux Density (B) [Tesla]&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;B-H Curve of a Ferromagnetic Material&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/ad88f979abc125217bee6c0c0de3d1357c6723f64f5bc20c3efd920ef0896a15.png" src="../_images/ad88f979abc125217bee6c0c0de3d1357c6723f64f5bc20c3efd920ef0896a15.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Relative permeability</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">B</span><span class="p">))</span>
+
+<span class="n">mu</span> <span class="o">=</span> <span class="n">B</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">16</span><span class="p">]</span><span class="o">/</span><span class="n">H</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">16</span><span class="p">]</span>
+<span class="n">mu</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>17
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0.00125751, 0.00125706, 0.00125608, 0.00125396, 0.00124939,
+       0.0012396 , 0.00121897, 0.00117689, 0.00109657, 0.00096084,
+       0.00077211, 0.00056807, 0.00039494, 0.00026929, 0.00018318])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Relative permeability calculated</span>
+<span class="n">mu</span><span class="o">/</span><span class="p">(</span><span class="mi">4</span><span class="o">*</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="mi">10</span><span class="o">**-</span><span class="mi">7</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([1000.69330307, 1000.33429618,  999.5557726 ,  997.87020111,
+        994.23337512,  986.44460938,  970.02615604,  936.54255852,
+        872.62645789,  764.61613023,  614.42461067,  452.05661945,
+        314.28132787,  214.2940248 ,  145.76723339])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create the plot</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span> <span class="c1"># Adjust figure size as needed</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">H</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">16</span><span class="p">],</span> <span class="n">mu</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;B-H Curve&#39;</span><span class="p">)</span>
+
+<span class="c1"># Add labels and title</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Magnetic Field Strength (H) [A/m]&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Relative permeability ($\mu_r$) [Dimensionless]&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Relative permeability as a function of magnetizing intensity H&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/6849dae226e284f339e9150267931c968de237c2549af56166f05de6628c5286.png" src="../_images/6849dae226e284f339e9150267931c968de237c2549af56166f05de6628c5286.png" />
+</div>
+</div>
+</section>
+<section id="relative-evaluation-of-permeability">
+<h3>Relative evaluation of permeability<a class="headerlink" href="#relative-evaluation-of-permeability" title="Permalink to this heading">#</a></h3>
+<p>Silicon iron 1% <a class="reference external" href="https://www.google.com/search?q=what+is+the+saturation+level+for+silicon+iron+1%25&amp;sca_esv=faa806e7e2c2d086&amp;rlz=1C1CHBF_noNO988NO988&amp;sxsrf=AE3TifPx4IrUKppjpskbHOZUoIIwGF_hdA%3A1755345088631&amp;ei=wHCgaNekJqySwPAPq-6_iQs&amp;ved=0ahUKEwjXhN2Doo-PAxUsCRAIHSv3L7EQ4dUDCA8&amp;uact=5&amp;oq=what+is+the+saturation+level+for+silicon+iron+1%25&amp;gs_lp=Egxnd3Mtd2l6LXNlcnAiMHdoYXQgaXMgdGhlIHNhdHVyYXRpb24gbGV2ZWwgZm9yIHNpbGljb24gaXJvbiAxJTIFECEYoAEyBRAhGKABMgUQIRigATIFECEYoAEyBRAhGKABSIEPUHtYqgxwAXgBkAEAmAGQAaABgQOqAQMwLjO4AQPIAQD4AQGYAgSgApcDwgIKEAAYsAMY1gQYR8ICBRAhGJ8FwgIFEAAY7wXCAggQABiABBiiBJgDAIgGAZAGCJIHAzEuM6AHkAqyBwMwLjO4B5ADwgcFMC4xLjPIBw0&amp;sclient=gws-wiz-serp">Sat_SI1%</a> <a class="reference external" href="https://www.google.com/search?q=what+is+the+initial+relative+permeability+of+silicon+iron+1%25&amp;rlz=1C1CHBF_noNO988NO988&amp;oq=what+is+the+initial+relative+permeability+of+silicon+iron+1%25&amp;gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIHCAEQIRigATIHCAIQIRigAdIBCTE4ODQxajBqN6gCCLACAfEF-m5DvfsJxtc&amp;sourceid=chrome&amp;ie=UTF-8">Init_mu SI1%</a> 2.1 Tesla, 6000 H/m<br />
+Cast Steel <a class="reference external" href="https://www.google.com/search?q=what+is+the+magnetic+saturation+level+in+Teslas++for+cast+steel&amp;sca_esv=faa806e7e2c2d086&amp;rlz=1C1CHBF_noNO988NO988&amp;sxsrf=AE3TifNfUUGOamNV9OHXNBnNFZnv2R7-AA%3A1755346186792&amp;ei=CnWgaO2QMJOrwPAPqLa6uQo&amp;ved=0ahUKEwjtva-Ppo-PAxWTFRAIHSibLqcQ4dUDCA8&amp;uact=5&amp;oq=what+is+the+magnetic+saturation+level+in+Teslas++for+cast+steel&amp;gs_lp=Egxnd3Mtd2l6LXNlcnAiP3doYXQgaXMgdGhlIG1hZ25ldGljIHNhdHVyYXRpb24gbGV2ZWwgaW4gVGVzbGFzICBmb3IgY2FzdCBzdGVlbEiXVFDHB1inTnACeACQAQCYAZMBoAHUD6oBBDEzLjm4AQPIAQD4AQGYAhOgAvUMwgIIEAAYsAMY7wXCAgsQABiABBiwAxiiBMICBBAjGCfCAgUQABjvBcICCBAAGIAEGKIEwgIEECEYCpgDAIgGAZAGBJIHBDExLjigB7hJsgcDOS44uAfsDMIHBjAuMTAuOcgHNg&amp;sclient=gws-wiz-serp">Sat_CastSteel</a>2.1 Tesla, 4000 H/m<br />
+Cast Iron <a class="reference external" href="https://www.google.com/search?q=what+is+the+magnetic+saturation+level+in+Teslas+for+cast+iron&amp;sca_esv=faa806e7e2c2d086&amp;rlz=1C1CHBF_noNO988NO988&amp;sxsrf=AE3TifOJz2kZCB3XdT8rNw3r-u_4kVr-lQ%3A1755346214144&amp;ei=JnWgaPLNCM2FwPAPlIDNqQo&amp;ved=0ahUKEwjy-LScpo-PAxXNAhAIHRRAM6UQ4dUDCA8&amp;uact=5&amp;oq=what+is+the+magnetic+saturation+level+in+Teslas+for+cast+iron&amp;gs_lp=Egxnd3Mtd2l6LXNlcnAiPXdoYXQgaXMgdGhlIG1hZ25ldGljIHNhdHVyYXRpb24gbGV2ZWwgaW4gVGVzbGFzIGZvciBjYXN0IGlyb25I7_8qUNr2Klid-ipwAngBkAEAmAFtoAG_AqoBAzMuMbgBA8gBAPgBAZgCBaACkALCAgoQABiwAxjWBBhHwgIIEAAYgAQYogTCAgUQABjvBcICBBAhGBWYAwCIBgGQBgiSBwM0LjGgB60KsgcDMi4xuAeJAsIHBTEuMi4yyAcJ&amp;sclient=gws-wiz-serp">Sat_CastIron</a> 1.6-2.1 Tesla, 100-500 H/m</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_SI</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;BH_SI1%.txt&quot;</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">df_CastSteel</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;BH_CastSteel.txt&quot;</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">df_CastIron</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;BH_CastIron.txt&quot;</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">H_mu0</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">5000</span><span class="p">,</span><span class="mi">1000</span><span class="p">)</span>
+<span class="n">B_mu0</span> <span class="o">=</span> <span class="mi">4</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="mi">10</span><span class="o">**-</span><span class="mi">7</span><span class="o">*</span><span class="n">H_mu0</span>
+<span class="n">H_SI</span> <span class="o">=</span> <span class="n">df_SI</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
+<span class="n">B_SI</span> <span class="o">=</span> <span class="n">df_SI</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
+<span class="n">H_CastSteel</span> <span class="o">=</span> <span class="n">df_CastSteel</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
+<span class="n">B_CastSteel</span> <span class="o">=</span> <span class="n">df_CastSteel</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
+<span class="n">H_CastIron</span> <span class="o">=</span> <span class="n">df_CastIron</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">12</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
+<span class="n">B_CastIron</span> <span class="o">=</span> <span class="n">df_CastIron</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">12</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
+
+<span class="c1"># Create the plot</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">28</span><span class="p">,</span> <span class="mi">12</span><span class="p">))</span> <span class="c1"># Adjust figure size as needed</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">H_SI</span><span class="p">,</span> <span class="n">B_SI</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;SiliconIron&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">H_CastSteel</span><span class="p">,</span> <span class="n">B_CastSteel</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;dashed&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Cast Steel&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">H_CastIron</span><span class="p">,</span> <span class="n">B_CastIron</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;dashed&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Cast Iron&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">H_mu0</span><span class="p">,</span> <span class="n">B_mu0</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;dotted&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;orange&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Air&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+
+<span class="c1"># Add labels and title</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Magnetic Field Strength (H) [A/m]&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Magnetic Flux Density (B) [Tesla]&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;B-H Curve of a Ferromagnetic Material&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/4509cc8f211ad6db1f27bf188f177893680f64457551f91275992edb74e0f1cd.png" src="../_images/4509cc8f211ad6db1f27bf188f177893680f64457551f91275992edb74e0f1cd.png" />
+</div>
+</div>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./12_magnetic_circuits"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Nils Jakob Johannesen
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2026.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -374,37 +374,34 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="magnetic-circuits">
 <h1>Magnetic circuits<a class="headerlink" href="#magnetic-circuits" title="Permalink to this heading">#</a></h1>
-<p>So we have seen that the current in a coil of wire wrapped around a core produces a magnetic flux in the core <span class="math notranslate nohighlight">\(\Phi\)</span><br />
-Theese equations are analogous to the those for an electric circuit
-<img width="500" src="../images/magnetic_and_elec_circ.png"
-     alt='Some'>
-<table>
-<tr>
-<td>
-<strong>Electric Circuit</strong>
-<br>
-Ohms law
-\begin{equation}
-V = I\cdot R
-\end{equation}
-V = electromotive force (emf)<br />
-I = current<br />
-R = resistance
-</td>
-<td>
-<strong>Magnetic circuit</strong>
-<br>
-Analogous to Ohms law
-\begin{equation}
-\mathcal{F} = \mathcal{\Phi} \mathcal{R}
-\end{equation}
-<span class="math notranslate nohighlight">\(\mathcal{F}\)</span> = magnetomotive force (mmf) (Ni)<br />
-<span class="math notranslate nohighlight">\(\mathcal{\Phi}\)</span> = flux of circuit<br />
-<span class="math notranslate nohighlight">\(\mathcal{R}\)</span> = reluctance of circuit
-</td>
+<p>So we have seen that the current in a coil of wire wrapped around a core produces a magnetic flux in the core <span class="math notranslate nohighlight">\(\Phi\)</span>\</p>
+<p>As shown in <a class="reference internal" href="#circuit-analogy"><span class="std std-numref">Table 3</span></a>, the magnetic circuit is analogous to the electric circuit.</p>
+<figure class="align-default" id="fig-magnetic-elec-circ">
+<a class="reference internal image-reference" href="images/magnetic_amd_elec_circ.png"><img alt="images/magnetic_amd_elec_circ.png" src="images/magnetic_amd_elec_circ.png" style="width: 500px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 2 </span><span class="caption-text">Magnetic core with coil.</span><a class="headerlink" href="#fig-magnetic-elec-circ" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<div class="pst-scrollable-table-container"><table class="table" id="circuit-analogy">
+<caption><span class="caption-number">Table 3 </span><span class="caption-text">Analogy of circuits</span><a class="headerlink" href="#circuit-analogy" title="Permalink to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Electric Circuit</p></th>
+<th class="head"><p>Magnetic Circuit</p></th>
 </tr>
-</table></p>
-<p><img alt="wildi" src="../_images/magnetic_and_elec_circ.png" /></p>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Ohm’s law</strong></p></td>
+<td><p><strong>Analogous to Ohm’s law</strong></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(V = I\cdot R\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\mathcal{F} = \Phi \mathcal{R}\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(V\)</span> = electromotive force (emf)<br><span class="math notranslate nohighlight">\(I\)</span> = current<br><span class="math notranslate nohighlight">\(R\)</span> = resistance</p></td>
+<td><p><span class="math notranslate nohighlight">\(\mathcal{F}\)</span> = magnetomotive force (mmf) <span class="math notranslate nohighlight">\((NI)\)</span><br><span class="math notranslate nohighlight">\(\Phi\)</span> = magnetic flux<br><span class="math notranslate nohighlight">\(\mathcal{R}\)</span> = reluctance</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 <section id="energy-losses-in-a-ferromagnetic-core">
 <h2>Energy Losses in a Ferromagnetic core<a class="headerlink" href="#energy-losses-in-a-ferromagnetic-core" title="Permalink to this heading">#</a></h2>
 <p>The main losses in electromagnetic processes are:</p>
@@ -420,11 +417,12 @@ Analogous to Ohms law
 <li><p>If the flux linking a loop (or turn) varies as a function of time, a voltage is induced between its terminals</p></li>
 <li><p>The value of the induced voltage is proportional to the rate of change of flux</p></li>
 </ol>
-<p>Described by
-<center> \begin{equation}
-emf = N\frac{\Delta \Phi}{\Delta t}
-\end{equation}</center>
-where<br />
+<p>Described by</p>
+<div class="math notranslate nohighlight">
+\[
+             emf = N\frac{\Delta \Phi}{\Delta t}
+\]</div>
+<p>where<br />
 emf = electromotove force -induced voltage [V]<br />
 N = Number of turns in the coil<br />
 <span class="math notranslate nohighlight">\(\Delta \Phi\)</span> = change of flux inside the coil [Wb]<br />
@@ -433,11 +431,12 @@ N = Number of turns in the coil<br />
 </section>
 <section id="voltage-induced-in-a-conductor">
 <h3>Voltage induced in a conductor<a class="headerlink" href="#voltage-induced-in-a-conductor" title="Permalink to this heading">#</a></h3>
-<p>Easier to calculate length of conductors than whenever a concuctor cuts a magnetic field
-<center> \begin{equation}
-emf = Blv
-\end{equation}</center>
-where<br />
+<p>Easier to calculate length of conductors than whenever a concuctor cuts a magnetic field</p>
+<div class="math notranslate nohighlight">
+\[
+             emf = Blv
+\]</div>
+<p>where<br />
 emf = electromotive force -induced voltage [V]<br />
 B = flux density [T]<br />
 l = active length of the conductor in the magnetic field [m]<br />
@@ -445,15 +444,22 @@ v = relative speed of the conductor [m/s]</p>
 </section>
 <section id="lorentz-force-on-conductor">
 <h3>Lorentz force on conductor<a class="headerlink" href="#lorentz-force-on-conductor" title="Permalink to this heading">#</a></h3>
-<center> \begin{equation}
+<div class="math notranslate nohighlight">
+\[
           F = BlI
-\end{equation}</center>
+\]</div>
 <p>where<br />
 emf = electromotove force -induced voltage [V]<br />
 B = flux density [T]<br />
 l = active length of the conductor [m]<br />
 I = current in the conductor [A]</p>
 <p><a class="reference external" href="https://nationalmaglab.org/magnet-academy/watch-play/interactive-tutorials/lorentz-force">Lorentz Force</a></p>
+<figure class="align-default" id="fig-magnetic-force-set-uo">
+<a class="reference internal image-reference" href="../_images/magforce_setup.png"><img alt="../_images/magforce_setup.png" src="../_images/magforce_setup.png" style="width: 500px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 3 </span><span class="caption-text">Magnetic force between North and South pole in a magnet</span><a class="headerlink" href="#fig-magnetic-force-set-uo" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p><img align="right" width="750" src="../images/magforce_setup.png"
      alt='-'></p>
 </section>
@@ -466,12 +472,26 @@ I = current in the conductor [A]</p>
 <p>Yet magnetic field lines will never cross each other, but align up in such a manner that the magnetic field above the conductor will add, and the magnetic field beneth the conductor will cancel each other out, so that in the end there is more magnetic field lines above.</p>
 <p>The force excelled on the conductor is going down.</p>
 <p><a class="reference external" href="https://nationalmaglab.org/magnet-academy/watch-play/interactive-tutorials/inductive-reactance/">Inductive Reactance</a></p>
+<figure class="align-default" id="fig-magnetic-force-cross">
+<a class="reference internal image-reference" href="../_images/magforce_cross.png"><img alt="../_images/magforce_cross.png" src="../_images/magforce_cross.png" style="width: 500px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 4 </span><span class="caption-text">The right hand rule when current goes into the page</span><a class="headerlink" href="#fig-magnetic-force-cross" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p><img align="right" width="500" src="../images/magforce_cross.png"
      alt='-'></p>
-<p><img align="right" width="750" src="../images/magforce_combined.png"
-     alt='-'></p>
-<p><img align="right" width="750" src="../images/magforce_sum.png"
-     alt='-'></p>
+<figure class="align-default" id="fig-magnetic-force-combined">
+<a class="reference internal image-reference" href="../_images/magforce_combined.png"><img alt="../_images/magforce_combined.png" src="../_images/magforce_combined.png" style="width: 500px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 5 </span><span class="caption-text">The magnetic fields combined</span><a class="headerlink" href="#fig-magnetic-force-combined" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="fig-magnetic-force-sum">
+<a class="reference internal image-reference" href="../_images/magforce_sum.png"><img alt="../_images/magforce_sum.png" src="../_images/magforce_sum.png" style="width: 500px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 6 </span><span class="caption-text">The sum of the magnetic fields excells a Lorents force</span><a class="headerlink" href="#fig-magnetic-force-sum" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 </section>
 </section>
 </section>

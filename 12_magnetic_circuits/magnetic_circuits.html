@@ -359,8 +359,13 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#voltage-induced-in-a-conductor">Voltage induced in a conductor</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lorentz-force-on-conductor">Lorentz force on conductor</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#direction-of-the-force-acting-on-a-straight-conductor">Direction of the force acting on a straight conductor</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#residual-flux-density-and-coercive-force">Residual flux density and coercive force</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hysteresis-loop">Hysteresis Loop</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hysteresis-loss">Hysteresis loss</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#eddy-currents">Eddy currents</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#significance">Significance:</a></li>
 </ul>
             </nav>
         </div>
@@ -374,10 +379,10 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="magnetic-circuits">
 <h1>Magnetic circuits<a class="headerlink" href="#magnetic-circuits" title="Permalink to this heading">#</a></h1>
-<p>So we have seen that the current in a coil of wire wrapped around a core produces a magnetic flux in the core <span class="math notranslate nohighlight">\(\Phi\)</span>\</p>
+<p>So we have seen that the current in a coil of wire wrapped around a core produces a magnetic flux in the core <span class="math notranslate nohighlight">\(\Phi\)</span></p>
 <p>As shown in <a class="reference internal" href="#circuit-analogy"><span class="std std-numref">Table 3</span></a>, the magnetic circuit is analogous to the electric circuit.</p>
 <figure class="align-default" id="fig-magnetic-elec-circ">
-<a class="reference internal image-reference" href="images/magnetic_amd_elec_circ.png"><img alt="images/magnetic_amd_elec_circ.png" src="images/magnetic_amd_elec_circ.png" style="width: 500px;" /></a>
+<a class="reference internal image-reference" href="../_images/magnetic_and_elec_circ.png"><img alt="../_images/magnetic_and_elec_circ.png" src="../_images/magnetic_and_elec_circ.png" style="width: 500px;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 2 </span><span class="caption-text">Magnetic core with coil.</span><a class="headerlink" href="#fig-magnetic-elec-circ" title="Permalink to this image">#</a></p>
 </figcaption>
@@ -478,8 +483,6 @@ I = current in the conductor [A]</p>
 <p><span class="caption-number">Fig. 4 </span><span class="caption-text">The right hand rule when current goes into the page</span><a class="headerlink" href="#fig-magnetic-force-cross" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p><img align="right" width="500" src="../images/magforce_cross.png"
-     alt='-'></p>
 <figure class="align-default" id="fig-magnetic-force-combined">
 <a class="reference internal image-reference" href="../_images/magforce_combined.png"><img alt="../_images/magforce_combined.png" src="../_images/magforce_combined.png" style="width: 500px;" /></a>
 <figcaption>
@@ -493,6 +496,43 @@ I = current in the conductor [A]</p>
 </figcaption>
 </figure>
 </section>
+<section id="residual-flux-density-and-coercive-force">
+<h3>Residual flux density and coercive force<a class="headerlink" href="#residual-flux-density-and-coercive-force" title="Permalink to this heading">#</a></h3>
+<p>Starting from zero I increase, there is an increase in H and B, traced in curve 0-a. The flux density reaches a value <span class="math notranslate nohighlight">\(B_m\)</span> for a magnetic field strength <span class="math notranslate nohighlight">\(H_m\)</span>.</p>
+<p>If the current is reduced to zero the flux density traces curve a-b. The magnetic domains that were lined up under the influence of <span class="math notranslate nohighlight">\(H_m\)</span> retain their original orientation.</p>
+<p>When H is reduced to zero, a substantial flux density remains: The residual flux density or residual induction <span class="math notranslate nohighlight">\(B_r\)</span>.</p>
+<p>The magnetic field strength required to reduce the flux to zero is called coercive force <span class="math notranslate nohighlight">\(H_c\)</span>. This requires energy that is dissipated as heat in the material</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<img alt="../_images/76480d54ad11de7e166b67c45e2aefe8485ed87a4caffaec8307a617c2bafaa7.png" src="../_images/76480d54ad11de7e166b67c45e2aefe8485ed87a4caffaec8307a617c2bafaa7.png" />
+</div>
+</div>
+</section>
+<section id="hysteresis-loop">
+<h3>Hysteresis Loop<a class="headerlink" href="#hysteresis-loop" title="Permalink to this heading">#</a></h3>
+<p><a class="reference external" href="https://nationalmaglab.org/magnet-academy/watch-play/interactive-tutorials/alternating-current/">Alternating Current</a></p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<img alt="../_images/4e161f16dd2a9f0d82f9ffbe0c124778c79c9c12b76c85724b47fa7f13ee3496.png" src="../_images/4e161f16dd2a9f0d82f9ffbe0c124778c79c9c12b76c85724b47fa7f13ee3496.png" />
+</div>
+</div>
+</section>
+<section id="hysteresis-loss">
+<h3>Hysteresis loss<a class="headerlink" href="#hysteresis-loss" title="Permalink to this heading">#</a></h3>
+<p>The magnetic material absorbs energy during each cycle and this energy is dissipated as heat.</p>
+<p>To reduce hysteresis losses one can select magnetic materials that have a narrow hysteresis loop, such as the grain-oriented silicon steel used in the cores of alternating-current transformers</p>
+</section>
+<section id="eddy-currents">
+<h3>Eddy currents<a class="headerlink" href="#eddy-currents" title="Permalink to this heading">#</a></h3>
+<p>Faraday law explains the eddy current losses. When a time-changing flux induces a voltage within a ferromagnetic core in just the same manner as it would in a wire wrapped around that that core</p>
+<p>These voltages cause swirls of currents within the core, much like eddies seen at the edges of a river. It is the shape that gives name to eddy currents</p>
+</section>
+</section>
+<section id="significance">
+<h2>Significance:<a class="headerlink" href="#significance" title="Permalink to this heading">#</a></h2>
+<p>The hysteresis loop provides valuable information about the magnetic properties of a material, including its saturation magnetization, retentivity, and coercivity.
+It helps engineers select appropriate materials for various applications, such as transformers, motors, and magnetic storage devices.
+The area enclosed by the hysteresis loop represents the energy loss per cycle due to hysteresis, which is important in applications where energy efficiency is critical.</p>
 </section>
 </section>
 

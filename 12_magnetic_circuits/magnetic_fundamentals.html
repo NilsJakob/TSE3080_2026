@@ -370,6 +370,7 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#permeability-of-ferromagnetic-material-steel">Permeability of Ferromagnetic Material (Steel)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#relative-permeability">Relative permeability</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#relative-evaluation-of-permeability">Relative evaluation of permeability</a></li>
 </ul>
             </nav>
@@ -384,7 +385,7 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="magnetic-fundamentals">
 <h1>Magnetic fundamentals<a class="headerlink" href="#magnetic-fundamentals" title="Permalink to this heading">#</a></h1>
-<p>How a magnetic flux exists in a body or component, it is due to the presence of a magnetic field intensity H <span id="id1">[]</span>. This is the fundamentals of electromagnetism.</p>
+<p>How a magnetic flux exists in a body or component, it is due to the presence of a magnetic field intensity H <span id="id1">[<a class="reference internal" href="../references.html#id5" title="Theodore Wildi. Electrical Machines, Drives, and Power Systems. Pearson Education Limited, 6 edition, 2014. ISBN 9781292024585.">Wil14</a>]</span>. This is the fundamentals of electromagnetism.</p>
 <section id="electromagnetism">
 <h2>Electromagnetism<a class="headerlink" href="#electromagnetism" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
@@ -606,15 +607,7 @@ H = magnetic field strength [A/m]<br />
 </tbody>
 </table>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># import libraries</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
-</pre></div>
-</div>
-</div>
+<div class="cell tag_remove-input docutils container">
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -644,33 +637,12 @@ H = magnetic field strength [A/m]<br />
 </div>
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create the plot</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span> <span class="c1"># Adjust figure size as needed</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">H_mu0</span><span class="p">,</span> <span class="n">B_mu0</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;B-H Curve&#39;</span><span class="p">)</span>
-
-<span class="c1"># Add labels and title</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Magnetic Field Strength (H) [A/m]&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Magnetic Flux Density (B) [Tesla]&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;B-H Curve&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
+<div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <img alt="../_images/4c77ac3f414e79aefb7507d76fc8cbdec363b26ca6cd29bd762e5d15d7445c1e.png" src="../_images/4c77ac3f414e79aefb7507d76fc8cbdec363b26ca6cd29bd762e5d15d7445c1e.png" />
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Plotting the rleative permeability to H-field</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">B_mu0</span><span class="p">))</span>
-<span class="n">mu</span> <span class="o">=</span> <span class="n">B_mu0</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">10</span><span class="p">]</span><span class="o">/</span><span class="n">H_mu0</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">10</span><span class="p">]</span>
-<span class="n">mu</span>
-</pre></div>
-</div>
-</div>
+<div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>11
 </pre></div>
@@ -682,20 +654,7 @@ H = magnetic field strength [A/m]<br />
 </div>
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create the plot</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span> <span class="c1"># Adjust figure size as needed</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">H_mu0</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">10</span><span class="p">],</span> <span class="n">mu</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;B-H Curve&#39;</span><span class="p">)</span>
-
-<span class="c1"># Add labels and title</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Magnetic Field Strength (H) [A/m]&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Permeability (mu)&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;B-H Curve of a Ferromagnetic Material&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
+<div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <img alt="../_images/c360da571a3d6d770ead804576ef744a0a40c9d9be32d2ad601e515e1a3d3fe6.png" src="../_images/c360da571a3d6d770ead804576ef744a0a40c9d9be32d2ad601e515e1a3d3fe6.png" />
 </div>
@@ -754,23 +713,7 @@ H = magnetic field strength [A/m]<br />
 </tbody>
 </table>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">H</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">40</span><span class="p">,</span><span class="mi">50</span><span class="p">,</span><span class="mi">60</span><span class="p">,</span><span class="mi">70</span><span class="p">,</span><span class="mi">80</span><span class="p">,</span><span class="mi">90</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="mi">200</span><span class="p">,</span><span class="mi">300</span><span class="p">,</span><span class="mi">400</span><span class="p">,</span><span class="mi">500</span><span class="p">,</span><span class="mi">600</span><span class="p">])</span>
-<span class="n">B</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.14</span><span class="p">,</span><span class="mf">0.275</span><span class="p">,</span><span class="mf">0.385</span><span class="p">,</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">0.58</span><span class="p">,</span><span class="mf">0.65</span><span class="p">,</span><span class="mf">0.7</span><span class="p">,</span><span class="mf">1.1</span><span class="p">,</span><span class="mf">1.25</span><span class="p">,</span><span class="mf">1.375</span><span class="p">,</span><span class="mf">1.4</span><span class="p">,</span><span class="mf">1.425</span><span class="p">])</span>
-
-<span class="c1"># Create the plot</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span> <span class="c1"># Adjust figure size as needed</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">H</span><span class="p">,</span> <span class="n">B</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;B-H Curve&#39;</span><span class="p">)</span>
-
-<span class="c1"># Add labels and title</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Magnetic Field Strength (H) [A/m]&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Magnetic Flux Density (B) [Tesla]&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;B-H Curve of a Ferromagnetic Material&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
+<div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <img alt="../_images/f915709c6a5ca7de32401bcacaf906a4a7e064e908a713222f07388124d8cccf.png" src="../_images/f915709c6a5ca7de32401bcacaf906a4a7e064e908a713222f07388124d8cccf.png" />
 </div>
@@ -784,6 +727,7 @@ H = magnetic field strength [A/m]<br />
              \end{equation} </center>
 According to Wikipedia the permeability of Iron is $6.3*10**-3$ H/m
 <p><a class="reference external" href="https://en.wikipedia.org/wiki/Permeability_(electromagnetism)">Permeability</a></p>
+<p>And calculated using python:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mu</span> <span class="o">=</span> <span class="p">(</span><span class="mf">6.3</span><span class="o">*</span><span class="mi">10</span><span class="o">**-</span><span class="mi">3</span><span class="p">)</span>
@@ -799,21 +743,7 @@ According to Wikipedia the permeability of Iron is $6.3*10**-3$ H/m
 </div>
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
-
-<span class="c1"># Read the text file, specifying the delimiter if it&#39;s not a comma</span>
-<span class="c1"># For example, if tab-delimited: df = pd.read_csv(&quot;your_file.txt&quot;, delimiter=&#39;\t&#39;)</span>
-<span class="n">df1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;BH_1000_2T.txt&quot;</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">)</span> 
-<span class="c1"># </span>
-<span class="c1"># You can also save the DataFrame to a CSV file</span>
-<span class="c1">#df.to_csv(&quot;BH_1000_2T.csv&quot;, index=False) </span>
-<span class="c1"># Here we will use the file directly:</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">df1</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
+<div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>          H(A/m)      B(T)
 0       0.000000  0.000000
@@ -837,38 +767,21 @@ According to Wikipedia the permeability of Iron is $6.3*10**-3$ H/m
 </div>
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">H</span> <span class="o">=</span> <span class="n">df1</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
-<span class="n">B</span> <span class="o">=</span> <span class="n">df1</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
-</pre></div>
+<div class="cell tag_remove-input docutils container">
 </div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create the plot</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span> <span class="c1"># Adjust figure size as needed</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">H</span><span class="p">,</span> <span class="n">B</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;B-H Curve&#39;</span><span class="p">)</span>
-
-<span class="c1"># Add labels and title</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Magnetic Field Strength (H) [A/m]&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Magnetic Flux Density (B) [Tesla]&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;B-H Curve of a Ferromagnetic Material&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
+<div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <img alt="../_images/ad88f979abc125217bee6c0c0de3d1357c6723f64f5bc20c3efd920ef0896a15.png" src="../_images/ad88f979abc125217bee6c0c0de3d1357c6723f64f5bc20c3efd920ef0896a15.png" />
 </div>
 </div>
+</section>
+<section id="relative-permeability">
+<h2>Relative permeability<a class="headerlink" href="#relative-permeability" title="Permalink to this heading">#</a></h2>
+<p>Calculating the relative permeability in python:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Relative permeability</span>
-
 <span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">B</span><span class="p">))</span>
-
 <span class="n">mu</span> <span class="o">=</span> <span class="n">B</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">16</span><span class="p">]</span><span class="o">/</span><span class="n">H</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">16</span><span class="p">]</span>
 <span class="n">mu</span>
 </pre></div>
@@ -925,36 +838,7 @@ According to Wikipedia the permeability of Iron is $6.3*10**-3$ H/m
 <p>Silicon iron 1% <a class="reference external" href="https://www.google.com/search?q=what+is+the+saturation+level+for+silicon+iron+1%25&amp;sca_esv=faa806e7e2c2d086&amp;rlz=1C1CHBF_noNO988NO988&amp;sxsrf=AE3TifPx4IrUKppjpskbHOZUoIIwGF_hdA%3A1755345088631&amp;ei=wHCgaNekJqySwPAPq-6_iQs&amp;ved=0ahUKEwjXhN2Doo-PAxUsCRAIHSv3L7EQ4dUDCA8&amp;uact=5&amp;oq=what+is+the+saturation+level+for+silicon+iron+1%25&amp;gs_lp=Egxnd3Mtd2l6LXNlcnAiMHdoYXQgaXMgdGhlIHNhdHVyYXRpb24gbGV2ZWwgZm9yIHNpbGljb24gaXJvbiAxJTIFECEYoAEyBRAhGKABMgUQIRigATIFECEYoAEyBRAhGKABSIEPUHtYqgxwAXgBkAEAmAGQAaABgQOqAQMwLjO4AQPIAQD4AQGYAgSgApcDwgIKEAAYsAMY1gQYR8ICBRAhGJ8FwgIFEAAY7wXCAggQABiABBiiBJgDAIgGAZAGCJIHAzEuM6AHkAqyBwMwLjO4B5ADwgcFMC4xLjPIBw0&amp;sclient=gws-wiz-serp">Sat_SI1%</a> <a class="reference external" href="https://www.google.com/search?q=what+is+the+initial+relative+permeability+of+silicon+iron+1%25&amp;rlz=1C1CHBF_noNO988NO988&amp;oq=what+is+the+initial+relative+permeability+of+silicon+iron+1%25&amp;gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIHCAEQIRigATIHCAIQIRigAdIBCTE4ODQxajBqN6gCCLACAfEF-m5DvfsJxtc&amp;sourceid=chrome&amp;ie=UTF-8">Init_mu SI1%</a> 2.1 Tesla, 6000 H/m<br />
 Cast Steel <a class="reference external" href="https://www.google.com/search?q=what+is+the+magnetic+saturation+level+in+Teslas++for+cast+steel&amp;sca_esv=faa806e7e2c2d086&amp;rlz=1C1CHBF_noNO988NO988&amp;sxsrf=AE3TifNfUUGOamNV9OHXNBnNFZnv2R7-AA%3A1755346186792&amp;ei=CnWgaO2QMJOrwPAPqLa6uQo&amp;ved=0ahUKEwjtva-Ppo-PAxWTFRAIHSibLqcQ4dUDCA8&amp;uact=5&amp;oq=what+is+the+magnetic+saturation+level+in+Teslas++for+cast+steel&amp;gs_lp=Egxnd3Mtd2l6LXNlcnAiP3doYXQgaXMgdGhlIG1hZ25ldGljIHNhdHVyYXRpb24gbGV2ZWwgaW4gVGVzbGFzICBmb3IgY2FzdCBzdGVlbEiXVFDHB1inTnACeACQAQCYAZMBoAHUD6oBBDEzLjm4AQPIAQD4AQGYAhOgAvUMwgIIEAAYsAMY7wXCAgsQABiABBiwAxiiBMICBBAjGCfCAgUQABjvBcICCBAAGIAEGKIEwgIEECEYCpgDAIgGAZAGBJIHBDExLjigB7hJsgcDOS44uAfsDMIHBjAuMTAuOcgHNg&amp;sclient=gws-wiz-serp">Sat_CastSteel</a>2.1 Tesla, 4000 H/m<br />
 Cast Iron <a class="reference external" href="https://www.google.com/search?q=what+is+the+magnetic+saturation+level+in+Teslas+for+cast+iron&amp;sca_esv=faa806e7e2c2d086&amp;rlz=1C1CHBF_noNO988NO988&amp;sxsrf=AE3TifOJz2kZCB3XdT8rNw3r-u_4kVr-lQ%3A1755346214144&amp;ei=JnWgaPLNCM2FwPAPlIDNqQo&amp;ved=0ahUKEwjy-LScpo-PAxXNAhAIHRRAM6UQ4dUDCA8&amp;uact=5&amp;oq=what+is+the+magnetic+saturation+level+in+Teslas+for+cast+iron&amp;gs_lp=Egxnd3Mtd2l6LXNlcnAiPXdoYXQgaXMgdGhlIG1hZ25ldGljIHNhdHVyYXRpb24gbGV2ZWwgaW4gVGVzbGFzIGZvciBjYXN0IGlyb25I7_8qUNr2Klid-ipwAngBkAEAmAFtoAG_AqoBAzMuMbgBA8gBAPgBAZgCBaACkALCAgoQABiwAxjWBBhHwgIIEAAYgAQYogTCAgUQABjvBcICBBAhGBWYAwCIBgGQBgiSBwM0LjGgB60KsgcDMi4xuAeJAsIHBTEuMi4yyAcJ&amp;sclient=gws-wiz-serp">Sat_CastIron</a> 1.6-2.1 Tesla, 100-500 H/m</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_SI</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;BH_SI1%.txt&quot;</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">)</span>
-<span class="n">df_CastSteel</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;BH_CastSteel.txt&quot;</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">)</span>
-<span class="n">df_CastIron</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;BH_CastIron.txt&quot;</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">)</span>
-<span class="n">H_mu0</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">5000</span><span class="p">,</span><span class="mi">1000</span><span class="p">)</span>
-<span class="n">B_mu0</span> <span class="o">=</span> <span class="mi">4</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="mi">10</span><span class="o">**-</span><span class="mi">7</span><span class="o">*</span><span class="n">H_mu0</span>
-<span class="n">H_SI</span> <span class="o">=</span> <span class="n">df_SI</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
-<span class="n">B_SI</span> <span class="o">=</span> <span class="n">df_SI</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
-<span class="n">H_CastSteel</span> <span class="o">=</span> <span class="n">df_CastSteel</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
-<span class="n">B_CastSteel</span> <span class="o">=</span> <span class="n">df_CastSteel</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
-<span class="n">H_CastIron</span> <span class="o">=</span> <span class="n">df_CastIron</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">12</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
-<span class="n">B_CastIron</span> <span class="o">=</span> <span class="n">df_CastIron</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">12</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
-
-<span class="c1"># Create the plot</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">28</span><span class="p">,</span> <span class="mi">12</span><span class="p">))</span> <span class="c1"># Adjust figure size as needed</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">H_SI</span><span class="p">,</span> <span class="n">B_SI</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;SiliconIron&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">H_CastSteel</span><span class="p">,</span> <span class="n">B_CastSteel</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;dashed&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Cast Steel&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">H_CastIron</span><span class="p">,</span> <span class="n">B_CastIron</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;dashed&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Cast Iron&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">H_mu0</span><span class="p">,</span> <span class="n">B_mu0</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;dotted&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;orange&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Air&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
-
-<span class="c1"># Add labels and title</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Magnetic Field Strength (H) [A/m]&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Magnetic Flux Density (B) [Tesla]&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;B-H Curve of a Ferromagnetic Material&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
+<div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <img alt="../_images/4509cc8f211ad6db1f27bf188f177893680f64457551f91275992edb74e0f1cd.png" src="../_images/4509cc8f211ad6db1f27bf188f177893680f64457551f91275992edb74e0f1cd.png" />
 </div>

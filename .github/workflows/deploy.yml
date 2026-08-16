@@ -24,6 +24,11 @@ jobs:
       - name: Build the Jupyter Book
         run: jupyter-book build .
 
+      - name: Copy Lecture1 slides
+        run: |
+          mkdir -p _build/html/Lectures
+          cp Lectures/Lecture0.slides.html _build/html/Lectures/
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:

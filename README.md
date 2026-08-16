@@ -9,4 +9,8 @@ https://nilsjakob.github.io/TSE3080_2026/
 
 ## Lecture Slides
 
-Lecture 0 Slides: https://nilsjakob.github.io/TSE3080_2026/Lectures/Lecture0.slides.html
+Lecture0: https://nilsjakob.github.io/TSE3080_2026/Lectures/Lecture0.slides.html
+
+Lecture1: https://nilsjakob.github.io/TSE3080_2026/Lectures/Lecture1.slides.html
+
+Lecture2: https://nilsjakob.github.io/TSE3080_2026/Lectures/Lecture2.slides.html

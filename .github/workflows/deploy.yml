@@ -28,6 +28,7 @@ jobs:
         run: |
           mkdir -p _build/html/Lectures
           cp Lectures/*.slides.html _build/html/Lectures/
+          cp -r images _build/html/
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
